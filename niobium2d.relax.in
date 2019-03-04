@@ -18,6 +18,7 @@ verbosity = 'high'
 etot_conv_thr = 0.0001
 forc_conv_thr = 0.001
 nstep = 400
+wf_collect=.true.
 tstress = .true.
 tprnfor = .true.
 /
