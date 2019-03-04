@@ -11,7 +11,7 @@
 title = 'niobium2d'
 calculation = 'relax'
 restart_mode = 'from_scratch'
-outdir = './tmp'
+outdir = './'
 pseudo_dir = './'
 prefix = 'niobium2d'
 disk_io = 'none'
