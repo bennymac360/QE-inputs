@@ -9,13 +9,12 @@
 ! Symmetry found:
 &CONTROL
 title = 'niobium2d'
-calculation = 'relax'
+calculation = 'scf'
 restart_mode = 'from_scratch'
 outdir = './'
 pseudo_dir = './'
 prefix = 'niobium2d'
-disk_io = 'none'
-verbosity = 'default'
+verbosity = 'high'
 etot_conv_thr = 0.0001
 forc_conv_thr = 0.001
 nstep = 400
