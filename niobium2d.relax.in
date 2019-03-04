@@ -11,8 +11,6 @@
 title = 'niobium2d'
 calculation = 'scf'
 restart_mode = 'from_scratch'
-outdir = './'
-pseudo_dir = './'
 prefix = 'niobium2d'
 verbosity = 'high'
 etot_conv_thr = 0.0001
