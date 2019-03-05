@@ -1,0 +1,72 @@
+&CONTROL
+title = 'niobium2d'
+calculation = 'bands'
+restart_mode = 'from_scratch'
+prefix = 'niobium2d'
+outdir = './'
+pseudo_dir = './'
+verbosity = 'high'
+etot_conv_thr = 0.0001
+forc_conv_thr = 0.001
+nstep = 400
+wf_collect=.true.
+tstress = .true.
+tprnfor = .true.
+/
+&SYSTEM
+ibrav = 14
+a = 8.57365 
+b = 8.57365
+c = 8.57365
+cosAB = -0.33333
+cosAC = -0.33333
+cosBC = -0.33333
+nat = 9
+ntyp = 1
+ecutwfc = 60
+ecutrho = 480
+vdw_corr = 'xdm'
+xdm_a1 = 1.2153
+xdm_a2 = 2.3704
+input_DFT = 'PBE' 
+occupations = 'smearing'
+smearing = 'marzari-vanderbilt'
+degauss = 0.01
+/
+&ELECTRONS
+electron_maxstep = 200
+conv_thr = 1.0D-7
+diago_thr_init = 1e-4
+startingpot = 'atomic'
+startingwfc = 'atomic'
+mixing_mode = 'plain'
+mixing_beta = 0.5
+mixing_ndim = 8
+diagonalization = 'david'
+/
+&IONS
+ion_dynamics = 'bfgs'
+/
+
+ATOMIC_SPECIES
+Nb 92.096 Nb.pbe-spn-kjpaw_psl.1.0.0.UPF
+
+ATOMIC_POSITIONS angstrom
+
+Nb       0.00000000       0.00000000       3.30000000
+Nb       0.00000000       0.00000000      -3.30000000
+Nb       1.65000000      -1.65000000      -1.65000000
+Nb       3.30000000      -3.30000000       0.00000000
+Nb      -1.65000000       1.65000000      -1.65000000
+Nb       0.00000000       0.00000000       0.00000000
+Nb       1.65000000      -1.65000000       1.65000000
+Nb      -3.30000000       3.30000000       0.00000000
+Nb      -1.65000000       1.65000000       1.65000000
+
+K_POINTS crystal
+5
+0.0000000000 0.000000000 0.000000000 50 ! G
+-0.500000000 0.500000000 0.500000000 50 ! H
+0.2500000000 0.250000000 0.250000000 50 ! P
+0.0000000000 0.500000000 0.000000000 50 ! N
+0.0000000000 0.000000000 0.000000000 50 ! G
