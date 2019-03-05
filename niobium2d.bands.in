@@ -1,0 +1,5 @@
+&bands
+outdir = './'
+prefix = 'niobium2d'
+filband = 'niobium2d.bands'
+/
